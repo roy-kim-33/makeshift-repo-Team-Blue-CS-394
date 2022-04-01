@@ -23,14 +23,21 @@ const job = [
 const JobList = ({jobs}) => {
 	return(
 		<div className="FILLER">{jobs.map((job) => (
-			<div className="FILLER">{job.title}</div>
+			<div className="FILLER">
+				<ul>
+					<li> {job.title} </li>
+					<li> {job.pay} </li>
+					<li> {job.term} </li>
+					<li> {job.location} </li>
+				</ul>
+			</div>
 		))}
 		</div>
 	)
 }
 
 function App() {
-  
+
   return (
     <div className="App">
 		<JobList jobs={job}></JobList>
