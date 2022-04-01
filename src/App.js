@@ -1,23 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
 
+const job = [
+	{
+		"title": "job",
+		"id" : 1,
+		"pay" :	15,
+		"term" : "Spring 2022",
+		"location" : "Remote",
+		"description" : "text"
+	},
+	{
+		"title": "job",
+		"id" : 1,
+		"pay" :	15,
+		"term" : "Spring 2022",
+		"location" : "Remote",
+		"description" : "text"
+	}
+]
+
+const JobList = ({jobs}) => {
+	return(
+		<div className="FILLER">{jobs.map((job) => (
+			<div className="FILLER">{job.title}</div>
+		))}
+		</div>
+	)
+}
+
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+		<JobList jobs={job}></JobList>
     </div>
   );
 }
