@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
+import JobList from './components/JobList.js'
 
-const job = [
+const job_list = [
 	{
 		"title": "job",
 		"id" : 1,
@@ -20,27 +20,11 @@ const job = [
 	}
 ]
 
-const JobList = ({jobs}) => {
-	return(
-		<div className="FILLER">{jobs.map((job) => (
-			<div className="FILLER">
-				<ul>
-					<li> {job.title} </li>
-					<li> {job.pay} </li>
-					<li> {job.term} </li>
-					<li> {job.location} </li>
-				</ul>
-			</div>
-		))}
-		</div>
-	)
-}
-
 function App() {
 
   return (
     <div className="App">
-		<JobList jobs={job}></JobList>
+		<JobList jobs={job_list}></JobList>
     </div>
   );
 }
