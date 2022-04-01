@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
-const Job = ({job}) => {
+const Job = ({ job }) => {
     return (
-        <div className="FILLER">
-            <div> {job.title} </div>
-            <div> {job.pay} </div>
-            <div> {job.term} </div>
-            <div> {job.location} </div>
+        <div className='container-fluid'>
+            <div className="card" >
+                <div className='card-title'> {job.title} </div>
+                <div className='card-text'> {job.pay} </div>
+                <div> {job.term} </div>
+                <div> {job.location} </div>
+            </div>
         </div>
     )
 }
